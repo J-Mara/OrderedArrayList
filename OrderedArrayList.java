@@ -12,4 +12,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     super.add(findSpot(e), e);
     return true;
   }
+  public void add(int index, T element){
+    super.add(findSpot(element), element);
+  }
 }
