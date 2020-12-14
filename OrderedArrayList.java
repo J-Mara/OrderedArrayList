@@ -20,4 +20,10 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     add(element);
     return element;
   }
+  public OrderedArrayList(){
+    super();
+  }
+  public OrderedArrayList(int initialCapacity){
+    super();
+  }
 }
