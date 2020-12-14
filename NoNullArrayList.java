@@ -18,4 +18,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
       super.add(index, element);
     }
   }
+  public NoNullArrayList(){
+    super();
+  }
 }
