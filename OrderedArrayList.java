@@ -8,4 +8,8 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     }
     return size();
   }
+  public boolean add(T e){
+    super.add(findSpot(e), e);
+    return true;
+  }
 }
