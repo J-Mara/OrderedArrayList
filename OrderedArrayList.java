@@ -9,16 +9,26 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     return size();
   }
   public boolean add(T e){
+    if(e == null){
+      throw new IllegalArgumentException("value is null");
+    }
     super.add(findSpot(e), e);
     return true;
   }
   public void add(int index, T element){
+    if(element == null){
+      throw new IllegalArgumentException("value is null");
+    }
     super.add(findSpot(element), element);
   }
   public T set(int index, T element){
+    if(element == null){
+      throw new IllegalArgumentException("value is null");
+    }
+    T holder = super.get(index);
     super.remove(index);
     add(element);
-    return element;
+    return holder;
   }
   public OrderedArrayList(){
     super();
