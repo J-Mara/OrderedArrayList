@@ -10,4 +10,12 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     }
     return false;
   }
+  public void add(int index, T element){
+    if(element == null){
+      throw new IllegalArgumentException("value is null");
+    }
+    else{
+      super.add(index, element);
+    }
+  }
 }
